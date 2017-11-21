@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $(uname -r) != *"-coreos-"* ]]; then
+if [[ $(uname -r) != *"-coreos"* ]]; then
     echo "OS is not CoreOS"
     exit 1
 fi

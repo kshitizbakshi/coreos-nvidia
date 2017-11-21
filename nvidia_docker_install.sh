@@ -2,7 +2,7 @@
 
 NVIDIA_DOCKER_VERSION=${1:-1.0.1}
 
-if [[ $(uname -r) != *"-coreos-"* ]]; then
+if [[ $(uname -r) != *"-coreos"* ]]; then
     echo "OS is not CoreOS"
     exit 1
 fi
