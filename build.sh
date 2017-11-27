@@ -102,7 +102,7 @@ cp -ulf ${DRIVER_ARCHIVE_PATH} ${WORK_DIR}
 cd ${WORK_DIR}
 chmod +x ${DRIVER_ARCHIVE}.run
 sudo rm -Rf ./${DRIVER_ARCHIVE}
-./${DRIVER_ARCHIVE}.run -x -s
+./${DRIVER_ARCHIVE}.run -x -s --tmpdir ${PWD}/tmp
 cd ${ORIGINAL_DIR}
 
 # Ignore errors just for nspawn
