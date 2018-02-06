@@ -9,9 +9,13 @@ else
         exit 0;
 fi
 
-set -e
+dir_script="`dirname $0`"
+org_dir=$(pwd)
+cd $dir_script
 
 /bin/bash build.sh $1 $2 $3
 echo "NVIDIA Drivers built! Trying to install now...\n";
 /bin/bash nvidia_install.sh $1 $2 $3
 echo "NVIDIA Drivers installed!\n"
+
+cd $org_dir
