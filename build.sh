@@ -87,10 +87,10 @@ then
   mkdir -p nvidia_installers
   SITE=us.download.nvidia.com/XFree86/Linux-x86_64
   SITE2=us.download.nvidia.com/tesla
-  curl -s -L http://${SITE}/${DRIVER_VERSION}/${DRIVER_ARCHIVE}.run \
+  curl -s -L https://${SITE}/${DRIVER_VERSION}/${DRIVER_ARCHIVE}.run \
     -z ${DRIVER_ARCHIVE_PATH} \
     -o ${DRIVER_ARCHIVE_PATH} -f ||
-  curl -s -L http://${SITE2}/${DRIVER_VERSION}/${DRIVER_ARCHIVE}.run \
+  curl -s -L https://${SITE2}/${DRIVER_VERSION}/${DRIVER_ARCHIVE}.run \
     -z ${DRIVER_ARCHIVE_PATH} \
     -o ${DRIVER_ARCHIVE_PATH} -f
 fi
