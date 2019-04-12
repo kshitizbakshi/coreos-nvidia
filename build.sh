@@ -111,6 +111,7 @@ trap ":" ERR
 sudo systemd-nspawn -i ${DEV_CONTAINER} \
   --bind=${PWD}/_container_build.sh:/build.sh \
   --bind=${PWD}/${WORK_DIR}:/nvidia_installers \
+  --setenv=IGNORE_MISSING_MODULE_SYMVERS=1 \
   /bin/bash -x /build.sh ${EMERGE_SOURCES} ${DRIVER_VERSION}
 trap onerr ERR
 set -e

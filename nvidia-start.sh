@@ -1,5 +1,6 @@
 #!/bin/sh
 
+/usr/sbin/modprobe ipmi_devintf
 /opt/bin/nvidia-insmod.sh nvidia.ko
 
 # Start the first devices

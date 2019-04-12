@@ -33,7 +33,7 @@ ln -sfT lib64 /opt/lib 2>/dev/null
 mkdir -p /opt/lib64/modules/$release/video/
 
 tar xvf libraries-$DRIVER_VERSION.tar.bz2 -C /opt/lib64/
-tar xvf libraries-tls-$DRIVER_VERSION.tar.bz2 -C /opt/lib64/tls/
+#tar xvf libraries-tls-$DRIVER_VERSION.tar.bz2 -C /opt/lib64/tls/
 tar xvf modules-$COREOS_VERSION-$DRIVER_VERSION.tar.bz2 -C /opt/lib64/modules/$release/video/
 tar xvf tools-$DRIVER_VERSION.tar.bz2 -C /opt/bin/
 
