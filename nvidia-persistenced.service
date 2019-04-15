@@ -1,8 +1,14 @@
 [Unit]
 Description=NVIDIA Persistence Daemon
 Wants=local-fs.target
+After=nvidia-start.service
 
 [Service]
 Type=forking
-ExecStart=/opt/bin/nvidia-persistenced --user nvidia-persistenced --no-persistence-mode --verbose
-ExecStopPost=/bin/rm -rf /var/run/nvidia-persistenced    
+Restart=always
+RestartSec=2
+ExecStart=/opt/bin/nvidia-persistenced --user nvidia-persistenced --persistence-mode --verbose
+ExecStopPost=/bin/rm -rf /var/run/nvidia-persistenced
+
+[Install]
+WantedBy=multi-user.target
