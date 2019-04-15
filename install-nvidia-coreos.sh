@@ -18,4 +18,7 @@ echo "NVIDIA Drivers built! Trying to install now...\n";
 /bin/bash nvidia_install.sh $1 $2 $3
 echo "NVIDIA Drivers installed!\n"
 
+cp nvidia-configure-settings.sh /opt/bin
+systemctl start --no-block nvidia-configure-settings.service
+
 cd $org_dir

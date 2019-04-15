@@ -56,5 +56,4 @@ systemctl daemon-reload
 systemctl enable nvidia-start.service
 systemctl start nvidia-start.service
 
-systemctl enable nvidia-persistenced.service
 systemctl start nvidia-persistenced.service

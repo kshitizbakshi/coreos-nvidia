@@ -3,6 +3,9 @@ Description=Load NVIDIA module
 After=local-fs.target
 
 [Service]
+Type=oneshot
+StandardOutput=journal+console
+StandardError=journal+console
 ExecStart=/opt/bin/nvidia-start.sh
 
 [Install]
